@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29609.76
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Authentication.ServerSide.Shared", "Authentication.ServerSide.Shared\Authentication.ServerSide.Shared.shproj", "{25C78E68-9AF0-4338-94EF-0F14C3083734}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Authentication.ServerSide.Basic", "Authentication.ServerSide.Basic\Authentication.ServerSide.Basic.csproj", "{6F380D2C-AA7C-4F70-9AF0-511AF73D9164}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Authentication.ServerSide.Shared\Authentication.ServerSide.Shared.projitems*{25c78e68-9af0-4338-94ef-0f14c3083734}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6F380D2C-AA7C-4F70-9AF0-511AF73D9164}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F380D2C-AA7C-4F70-9AF0-511AF73D9164}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F380D2C-AA7C-4F70-9AF0-511AF73D9164}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F380D2C-AA7C-4F70-9AF0-511AF73D9164}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {42B22B7E-0307-41EB-93AD-404F4215F0FB}
+	EndGlobalSection
+EndGlobal
