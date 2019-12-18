@@ -8,7 +8,7 @@
   <Import Project="..\Authentication.ServerSide.Shared\Authentication.ServerSide.Shared.projitems" Label="Shared" />
 
   <ItemGroup>
-    <PackageReference Include="Mihir.AspNetCore.Authentication.Basic" Version="2.0.0" />
+    <PackageReference Include="AspNetCore.Authentication.Basic" Version="2.2.0" />
   </ItemGroup>
 
 

@@ -1,5 +1,5 @@
+using AspNetCore.Authentication.Basic;
 using Authentication.ServerSide.Services;
-using Mihir.AspNetCore.Authentication.Basic;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
