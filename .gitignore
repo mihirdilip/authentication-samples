@@ -348,3 +348,10 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+
+
+
+
+
+# Custom ignorables
+/src/Authentication.ServerSide.IdentityServer4/tempkey.rsa

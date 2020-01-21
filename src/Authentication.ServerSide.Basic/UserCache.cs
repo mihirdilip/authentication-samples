@@ -1,7 +1,6 @@
-﻿using Authentication.ServerSide.Models;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-namespace Authentication.ServerSide.Services
+namespace Authentication.ServerSide
 {
 	public interface IUserCache
 	{

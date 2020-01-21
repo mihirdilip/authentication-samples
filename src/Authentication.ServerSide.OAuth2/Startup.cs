@@ -1,7 +1,9 @@
-using AspNetCore.Authentication.Basic;
+using IdentityServer4.AccessTokenValidation;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.IdentityModel.Logging;
 
 namespace Authentication.ServerSide
 {
@@ -19,14 +21,16 @@ namespace Authentication.ServerSide
 		{
 			services.AddSharedServices();
 
-			services.AddSingleton<IUserCache, UserCache>();
-
-			services.AddAuthentication(BasicDefaults.AuthenticationScheme)
-				.AddBasic<BasicUserValidationService>(options => { options.Realm = "Authentication.ServerSide.Basic"; });
+			services.AddAuthentication(IdentityServerAuthenticationDefaults.AuthenticationScheme)
+				.AddIdentityServerAuthentication(IdentityServerAuthenticationDefaults.AuthenticationScheme, options =>
+				{
+					options.Authority = Configuration.GetValue<string>("IdentityServer:Authority");
+					options.ApiName = Configuration.GetValue<string>("IdentityServer:ApiName");
+				});
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-		public void Configure(IApplicationBuilder app)
+		public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 		{
 			app.UseSharedPipeline();
 		}

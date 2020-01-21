@@ -9,6 +9,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Authentication.ServerSide.B
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Authentication.ServerSide.ApiKey", "Authentication.ServerSide.ApiKey\Authentication.ServerSide.ApiKey.csproj", "{1922663F-FD43-4CB7-8A93-6E7E4623CE9D}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Authentication.ServerSide.OAuth2", "Authentication.ServerSide.OAuth2\Authentication.ServerSide.OAuth2.csproj", "{DA6CB4A8-BAB9-472D-B959-91E1FB18A41B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Authentication.ServerSide.IdentityServer4", "Authentication.ServerSide.IdentityServer4\Authentication.ServerSide.IdentityServer4.csproj", "{89A0C3DE-DAB8-40A9-91CC-04BED34464CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authentication.ServerSide.Bearer", "Authentication.ServerSide.Bearer\Authentication.ServerSide.Bearer.csproj", "{BD7B572F-31AE-4D30-A614-9F860203EFE3}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Authentication.ServerSide.Shared\Authentication.ServerSide.Shared.projitems*{25c78e68-9af0-4338-94ef-0f14c3083734}*SharedItemsImports = 13
@@ -26,6 +32,18 @@ Global
 		{1922663F-FD43-4CB7-8A93-6E7E4623CE9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1922663F-FD43-4CB7-8A93-6E7E4623CE9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1922663F-FD43-4CB7-8A93-6E7E4623CE9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA6CB4A8-BAB9-472D-B959-91E1FB18A41B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA6CB4A8-BAB9-472D-B959-91E1FB18A41B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA6CB4A8-BAB9-472D-B959-91E1FB18A41B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA6CB4A8-BAB9-472D-B959-91E1FB18A41B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89A0C3DE-DAB8-40A9-91CC-04BED34464CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89A0C3DE-DAB8-40A9-91CC-04BED34464CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89A0C3DE-DAB8-40A9-91CC-04BED34464CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89A0C3DE-DAB8-40A9-91CC-04BED34464CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD7B572F-31AE-4D30-A614-9F860203EFE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD7B572F-31AE-4D30-A614-9F860203EFE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD7B572F-31AE-4D30-A614-9F860203EFE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD7B572F-31AE-4D30-A614-9F860203EFE3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

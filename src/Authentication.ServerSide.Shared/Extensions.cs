@@ -1,5 +1,7 @@
-﻿using Authentication.ServerSide.Services;
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 
 namespace Authentication.ServerSide
 {
@@ -8,9 +10,32 @@ namespace Authentication.ServerSide
 		public static IServiceCollection AddSharedServices(this IServiceCollection services)
 		{
 			services.AddControllers();
-
-			services.AddSingleton<IUserCache, UserCache>();
+			
 			return services;
+		}
+
+		public static IApplicationBuilder UseSharedPipeline(this IApplicationBuilder app)
+		{
+			var env = app.ApplicationServices.GetRequiredService<IWebHostEnvironment>();
+
+			//if (env.IsDevelopment())
+			//{
+			//	app.UseDeveloperExceptionPage();
+			//}
+
+			app.UseHttpsRedirection();
+
+			app.UseRouting();
+
+			app.UseAuthentication();
+			app.UseAuthorization();
+
+			app.UseEndpoints(endpoints =>
+			{
+				endpoints.MapControllers();
+			});
+
+			return app;
 		}
 	}
 }

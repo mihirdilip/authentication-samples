@@ -1,4 +1,4 @@
-﻿namespace Authentication.ServerSide.Models
+﻿namespace Authentication.ServerSide
 {
 	public class User
 	{
