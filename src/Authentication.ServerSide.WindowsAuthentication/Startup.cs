@@ -1,6 +1,6 @@
-using IdentityServer4.AccessTokenValidation;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Server.IISIntegration;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -20,12 +20,7 @@ namespace Authentication.ServerSide
 		{
 			services.AddSharedServices();
 
-			services.AddAuthentication(IdentityServerAuthenticationDefaults.AuthenticationScheme)
-				.AddIdentityServerAuthentication(IdentityServerAuthenticationDefaults.AuthenticationScheme, options =>
-				{
-					options.Authority = Configuration.GetValue<string>("IdentityServer:Authority");
-					options.ApiName = Configuration.GetValue<string>("IdentityServer:ApiName");
-				});
+			services.AddAuthentication(IISDefaults.AuthenticationScheme);
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

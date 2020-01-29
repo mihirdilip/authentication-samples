@@ -1,7 +1,5 @@
 ﻿using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 
 namespace Authentication.ServerSide
 {
@@ -16,8 +14,7 @@ namespace Authentication.ServerSide
 
 		public static IApplicationBuilder UseSharedPipeline(this IApplicationBuilder app)
 		{
-			var env = app.ApplicationServices.GetRequiredService<IWebHostEnvironment>();
-
+			//var env = app.ApplicationServices.GetRequiredService<IWebHostEnvironment>();
 			//if (env.IsDevelopment())
 			//{
 			//	app.UseDeveloperExceptionPage();
