@@ -19,7 +19,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Authentication.ServerSide.W
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Authentication.ServerSide.Shared\Authentication.ServerSide.Shared.projitems*{1922663f-fd43-4cb7-8a93-6e7e4623ce9d}*SharedItemsImports = 5
 		Authentication.ServerSide.Shared\Authentication.ServerSide.Shared.projitems*{25c78e68-9af0-4338-94ef-0f14c3083734}*SharedItemsImports = 13
+		Authentication.ServerSide.Shared\Authentication.ServerSide.Shared.projitems*{6f380d2c-aa7c-4f70-9af0-511af73d9164}*SharedItemsImports = 5
+		Authentication.ServerSide.Shared\Authentication.ServerSide.Shared.projitems*{8c098771-a96a-403a-9b63-e52cf9f01097}*SharedItemsImports = 5
+		Authentication.ServerSide.Shared\Authentication.ServerSide.Shared.projitems*{bd7b572f-31ae-4d30-a614-9f860203efe3}*SharedItemsImports = 5
+		Authentication.ServerSide.Shared\Authentication.ServerSide.Shared.projitems*{da6cb4a8-bab9-472d-b959-91e1fb18a41b}*SharedItemsImports = 5
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
