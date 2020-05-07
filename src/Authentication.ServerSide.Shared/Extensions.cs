@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Authentication.ServerSide
@@ -7,7 +9,15 @@ namespace Authentication.ServerSide
 	{
 		public static IServiceCollection AddSharedServices(this IServiceCollection services)
 		{
-			services.AddControllers();
+			services.AddControllers(options =>
+			{
+				// ALWAYS USE HTTPS (SSL) protocol in production when using Basic authentication.
+				//options.Filters.Add<RequireHttpsAttribute>();
+
+				// All the requests will need to be authorized. 
+				// Alternatively, add [Authorize] attribute to Controller or Action Method where necessary.
+				options.Filters.Add(new AuthorizeFilter(new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build()));
+			});
 			
 			return services;
 		}
